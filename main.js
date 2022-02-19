@@ -7,13 +7,13 @@ rightwristx = 0;
 rightwristy = 0;
 
  function setup(){
-     canvas = createCanvas(500,500);
-     canvas.position(710,200);
+     canvas = createCanvas(600,500);
+     canvas.center(); //canvas.position(710,200);
      video = createCapture(VIDEO);
      video.hide();
 
      poseNet = ml5.poseNet(video, modelloaded);
-     poseNet.on("pose", gotPoses);
+     poseNet.on('pose', gotPoses);
  }
 
  function modelloaded(){
@@ -43,8 +43,8 @@ rightwristy = 0;
 
       if(scoreleft>0.2){
         circle(leftwristx ,leftwristy, 20);
-        leftwristy = Number(leftwristy);
-        remove_decimal = floor(leftwristy);
+        leftwristy1 = Number(leftwristy);
+        remove_decimal = floor(leftwristy1);
         volume = remove_decimal/500;
         document.getElementById("volume").innerHTML = "Volume = " + volume;
         song.setVolume(volume);
