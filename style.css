@@ -1,0 +1,43 @@
+body {
+    color: white;
+}
+
+.heading {
+    font-size: 25px ;
+    color: black;
+    margin-top:0;
+    width: 100%;
+    font-family: fantasy;
+}
+
+.note {
+    font-size: 20px;
+    color:white;
+    font-family: monospace;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    border-radius: 100px;
+}
+
+.speed{
+    float: left;
+}
+ 
+.volume {
+    float: right;
+}
+
+.play, #speed, #volume {
+    font-size: 20px;
+    width: 130px;
+}
+
+canvas {
+    background-color: white;
+    border-radius: 15px;
+    border: 5px black solid;
+    box-shadow: 5px 5px 15px white;
+}
