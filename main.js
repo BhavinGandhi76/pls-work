@@ -41,18 +41,13 @@ rightwristy = 0;
       fill("red");
       stroke("red");
 
-      if(scoreleft>0.2){
-        circle(leftwristx ,leftwristy, 20);
-        leftwristy1 = Number(leftwristy);
-        remove_decimal = floor(leftwristy1);
-        volume = remove_decimal/500;
-        document.getElementById("volume").innerHTML = "Volume = " + volume;
-        song.setVolume(volume);
-      }
+
 
       if(scoreright>0.2){
           circle(rightwristx ,rightwristy ,20);
-          if(rightwristy>0 && rightwristy<=100){
+
+
+        if(rightwristy>0 && rightwristy<=100){
             document.getElementById("speed").innerHTML = "Speed = 0.5x";
             song.rate(0.5);
         }
@@ -72,6 +67,15 @@ rightwristy = 0;
             document.getElementById("speed").innerHTML = "Speed = 2.5x";
             song.rate(2.5);
         }
+      }
+
+      if(scoreleft>0.2){
+        circle(leftwristx ,leftwristy, 20);
+        leftwristy1 = Number(leftwristy);
+        remove_decimal = floor(leftwristy1);
+        volume = remove_decimal/500;
+        document.getElementById("volume").innerHTML = "Volume = " + volume;
+        song.setVolume(volume);
       }
   }
  
