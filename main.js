@@ -23,6 +23,8 @@ rightwristy = 0;
  function gotPoses(results){
      if(results.length>0){
      console.log(results);
+     scoreright = results[0].pose.keypoints[10].score;
+     scoreleft = results[0].pose.keypoints[9].score;
      leftwristx = results[0].pose.leftWrist.x;
      rightwristx = results[0].pose.rightWrist.x;
      rightwristy = results[0].pose.rightWrist.y;
